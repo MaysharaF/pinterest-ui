@@ -2,10 +2,10 @@ import { View, StyleSheet, Text } from "react-native";
 
 import { theme } from "@/theme";
 
-export default function Home() {
+export default function Profile() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}>Profile</Text>
     </View>
   );
 }
@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.colors.black
+    backgroundColor: theme.colors.black,
   },
   text: {
     fontSize: 22,
     color: theme.colors.white,
-    fontFamily: theme.fontFamily.bold
+    fontFamily: theme.fontFamily.bold,
   },
 });
