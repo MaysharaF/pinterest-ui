@@ -6,7 +6,7 @@ import BottomSheet from "@gorhom/bottom-sheet";
 
 import { theme } from "@/theme";
 import { forwardRef } from "react";
-import { MenuButton } from "../MenuButton";
+import { MenuButton } from "@/components/MenuButton";
 
 export const Menu = forwardRef<BottomSheet, MenuProps>(({ onClose }, ref) => {
   return (
