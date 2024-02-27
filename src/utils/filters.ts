@@ -1,11 +1,11 @@
 export const FILTERS = [
-  "Tudo",
+  "All",
   "UI Clone",
   "Setup",
   "Gamer",
-  "Escritótio",
-  "Casa",
+  "Office",
+  "Coding",
   "Mobile",
-  "Inspirações",
+  "Inspirations",
   "Interfaces",
 ];
