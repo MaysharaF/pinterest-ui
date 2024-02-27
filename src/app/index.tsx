@@ -5,6 +5,7 @@ import { Skeleton } from "moti/skeleton";
 
 import Animated, {
   SlideInDown,
+  runOnJS,
   useAnimatedStyle,
   useSharedValue,
   withSequence,
@@ -12,6 +13,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 import { theme } from "@/theme";
+import { router } from "expo-router";
 
 export default function Splash() {
   const logoScale = useSharedValue(1);
@@ -47,6 +49,8 @@ export default function Splash() {
             withTiming(50, undefined, () => (contentDisplay.value = 1)),
             withTiming(-dimensions.height, { duration: 400 })
           );
+
+          runOnJS(onEndSplash)();
         }
       })
     );
@@ -78,6 +82,12 @@ export default function Splash() {
           </Animated.View>
         );
       });
+  }
+
+  function onEndSplash() {
+    setTimeout(() => {
+      router.push("/(tabs)");
+    }, 2000);
   }
 
   useEffect(() => {
